@@ -7,5 +7,6 @@ RUN ln -s locale.h /usr/include/xlocale.h
 RUN pip3 install cython
 
 RUN pip3 wheel nltk==3.4.5 --wheel-dir /output
+RUN mkdir -p /data/nltk
 
 CMD ["/bin/sh", "-c", "cp -r /output /data/nltk"]
